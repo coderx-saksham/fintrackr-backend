@@ -39,7 +39,7 @@ public class ProfileService {
         // Best-effort activation email (ignore failures for local demo)
         try {
             String activationLink = activationURL+"/api/v1.0/activate?token=" + newProfile.getActivationToken();
-            String subject = "Activate your Money Manager account";
+            String subject = "Activate your FinTrackr account";
             String body = "Click on the following link to activate your account: " + activationLink;
             emailService.sendEmail(newProfile.getEmail(), subject, body);
         } catch (Exception ignored) {

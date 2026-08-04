@@ -73,7 +73,7 @@ public class AiService {
         }
 
         String prompt = """
-                You are a finance assistant for a Money Manager app.
+                You are a finance assistant for a FinTrackr app.
                 User financial data (includes category breakdowns): %s
                 Previous conversation:
                 %s
@@ -187,7 +187,7 @@ public class AiService {
     public CutCoachResponseDTO getCutCoachAdvice() {
         Map<String, Object> context = buildFinancialContext();
         String prompt = """
-                You are a spending-cut coach for an Indian Money Manager user.
+                You are a spending-cut coach for an Indian FinTrackr user.
                 Financial data: %s
 
                 Analyze where they overspend and give ranked cut recommendations.
